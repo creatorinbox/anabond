@@ -1,5 +1,8 @@
 "use client"
+import Header from "@/components/header";
+import Slide from "@/components/slide";
 import { useState } from "react";
+import { motion } from "framer-motion"
 
 export default function Home() {
   const [count, setCount] = useState(0);
@@ -10,11 +13,21 @@ export default function Home() {
 
   }
   return (
-    <div className="grid items-center justify-items-center min-h-screen">
-      <h1 className="text-5xl font-bold uppercase">{count}</h1>
-      {msg ? <p>Value Increse</p>: ""}
-      <button className="border border-gary-500 px-4 py-2" onClick={handleEvent}>+</button>
+    <div className="min-h-screen">
+      <Header/>
+      <Slide />
+      <motion.section 
+      className="flex w-full bg-gray-100 my-3  px-2"
+      animate={{x:0}}
+      initial={{x: '100vw'}}
+      >
+        <div className="w-full md:w-1/4 bg-gray-200 p-5 md:p-10 rounded-lg shadow-lg">
+          <h3 className="text-lg">ABOUT ANABOND</h3>
+          <h3 className="text-3xl text-green-600 mt-3">Pioneers of Anaerobic adhesives in India.</h3>
+        </div>
+        <div className="w-full md:w-3/4 p-5 md:p-10">
+        </div>
+      </motion.section>
     </div>
-    
   );
 }

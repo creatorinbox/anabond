@@ -1,5 +1,12 @@
 import type { Metadata } from "next";
-import "./globals.css";
+import "@/styles/globals.css";
+import { Poppins } from 'next/font/google'
+
+const poppins = Poppins({
+  subsets: ['latin'],
+  weight: ['300', '500', '700'],
+  variable: '--font-poppins',
+})
 
 export const metadata: Metadata = {
   title: "Anabond",
@@ -13,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className={poppins.variable}>
         {children}
       </body>
     </html>
