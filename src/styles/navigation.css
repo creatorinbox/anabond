@@ -52,6 +52,6 @@
   }
   
   @media (max-width: 580px) {
-    .nav { overflow: auto; }
+    .nav { display: none }
   }
   

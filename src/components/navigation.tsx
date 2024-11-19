@@ -59,7 +59,7 @@ const Navigation = () => {
 
 // Utility function to determine the color based on the index
 const getActiveColor = (index: number): string => {
-  const colors = ["orange", "green", "blue", "red", "red", "rebeccapurple"];
+  const colors = ["#13A646", "#13A646", "#13A646", "#13A646", "#13A646", "#13A646"];
   return colors[index];
 };
 

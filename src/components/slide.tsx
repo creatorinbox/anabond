@@ -27,10 +27,18 @@ const Slide: React.FC = () => {
 
   return (
     <div className="slider-container" ref={parentRef} id="parent-class">
-      <div className="slider"></div>
-      <div className="slider"></div>
-      <div className="slider"></div>
-      <div className="slider"></div>
+      <div className="slider">
+        <img className="w-full" src="slider-banner-1.webp" alt="slider-1" />
+      </div>
+      <div className="slider">
+        <img className="w-full" src="slider-banner-4.webp" alt="slider-2" />
+      </div>
+      <div className="slider">
+        <img className="w-full" src="slider-banner-3.webp" alt="slider-3" />
+      </div>
+      <div className="slider">
+        <img className="w-full" src="slider-banner-2.webp" alt="slider-4" />
+      </div>
     </div>
   );
 };
