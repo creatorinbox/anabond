@@ -1,14 +1,12 @@
 "use client"
-import Header from "@/components/header";
+
 import Slide from "@/components/slide";
 import { useState } from "react";
 import { motion } from "framer-motion"
 import IconBox from "@/components/iconBox";
-import { Atom } from 'lucide-react';
 import CategoryTab from "@/components/categoryTab/categoryTab";
 import H2 from "@/components/h2";
 import Isro from "@/components/isro";
-import Footer from "@/components/footer";
 import Button from "@/components/button";
 
 export default function Home() {
@@ -21,7 +19,7 @@ export default function Home() {
   }
   return (
     <div className="min-h-screen max-w-full">
-      <Header/>
+
       <Slide />
       <motion.section 
       className="max-w-full bg-gray-100 my-3 px-2 py-10"
@@ -49,7 +47,7 @@ export default function Home() {
       >
       <CategoryTab />
       </div>
-      <Footer />
+
     </div>
   );
 }
