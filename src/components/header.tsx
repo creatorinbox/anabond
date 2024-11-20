@@ -14,7 +14,9 @@ const Header = () => {
     <img src="secondary-logo.svg" alt="anabond-logo" width={150} />
     <div className="flex items-center justify-end">
     <Navigation />
+    <div className="hidden md:block">
     <Button text="Call Request" />
+    </div>
     </div>
     </motion.div>
   )

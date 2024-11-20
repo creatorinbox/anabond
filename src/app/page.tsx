@@ -44,7 +44,9 @@ export default function Home() {
         </div>
       </motion.section>
       <Isro />
-      <div className=" bg-[#13A646]">
+      <div 
+      style={{background: "radial-gradient(circle, rgba(229,245,234,1) 45%, rgba(168,211,183,1) 100%)"}}
+      >
       <CategoryTab />
       </div>
       <Footer />

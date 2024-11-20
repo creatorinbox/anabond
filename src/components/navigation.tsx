@@ -34,13 +34,21 @@ const Navigation = () => {
     handleIndicator(activeIndex);
   }, [activeIndex]);
 
+  const menuArray = [
+    {lable:"Home", link:"/"}, 
+    {lable:"About", link:"/about-us"}, 
+    {lable:"R&D", link:"/r&d"}, 
+    {lable:"Products", link:"/products"}, 
+    {lable:"Media", link:"/media"}, 
+    {lable:"Blog", link:"/blog"},
+  ]
   return (
     <nav className="nav">
-      {["Home", "About", "R&D", "Products", "Media", "Blog"].map(
+      {menuArray?.map(
         (item, index) => (
           <Link
-            key={item}
-            href="#"
+            key={item.lable}
+            href={item.link}
             className={`nav-item ${index === activeIndex ? "is-active" : ""}`}
             active-color={getActiveColor(index)}
             ref={(el) => {
@@ -48,7 +56,7 @@ const Navigation = () => {
             }}
             onClick={() => setActiveIndex(index)}
           >
-            {item}
+            {item.lable}
           </Link>
         )
       )}
